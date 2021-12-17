@@ -1,0 +1,16 @@
+#header{
+				width: 1200px;margin: 0 auto;height: 80px;
+			}
+			#logo,#nav{float: left;}
+			#nav{margin-top: 30px;margin-left: 140px;}
+			#nav li{float: left;padding: 0 42px;border-right: 1px solid gainsboro;}
+			#nav li a{font-size: 14px;}
+			#footer{width: 1000px;margin: 0 auto;height: 50px;}
+			#footer_nav,#footer_nav li{float: left;}
+			#footer li{width: 80px;height: 20px;text-align: center;border-right: 1px solid lightgray;margin-top: 15px;}
+			#footer_nav li a,#footer span{font-size: 12px;}
+			#footer span{float: right;margin-top: 15px;}
+			#bottom{height: 30px;line-height: 30px;text-align: center;background-color: gainsboro;font-size: 12px;}
+			li a:hover{
+				color: orange;
+			}

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>小迪科技－上海小迪信息科技有限公司</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+
+		<!-- Demo styles -->
+		<style>
+			html,
+			body {
+				position: relative;
+				height: 100%;
+			}
+			
+			body {
+				background: white;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 92%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.swiper-slide {
+				/*text-align: center;*/
+				font-size: 18px;
+				background: #fff;
+				height: 100%;
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			#header {
+				width: 1200px;
+				margin: 0 auto;
+				height: 80px;
+			}
+			
+			#logo,
+			#nav {
+				float: left;
+			}
+			
+			#nav {
+				margin-top: 30px;
+				margin-left: 140px;
+			}
+			
+			#nav li {
+				float: left;
+				padding: 0 42px;
+				border-right: 1px solid gainsboro;
+			}
+			
+			#nav li a {
+				font-size: 14px;
+			}
+			
+			#nav li a:hover {
+				color: red;
+			}
+			
+			#footer {
+				width: 100%;
+				margin: 0 auto;
+				height: 50px;
+				clear: both;
+				position: absolute;
+				bottom: 30px;
+				z-index: 1000;
+				background-color: white;
+				/*text-align: center;*/
+			}
+			
+			#footer_nav,
+			#footer_nav li {
+				float: left;
+			}
+			#footer_nav{margin-left: 20%;}
+			#footer li {
+				width: 80px;
+				height: 20px;
+				text-align: center;
+				border-right: 1px solid lightgray;
+				margin-top: 15px;
+			}
+			
+			#footer_nav li a,
+			#footer span {
+				font-size: 12px;
+			}
+			
+			#footer span {
+				float: right;
+				margin-right: 10%;
+				margin-top: 15px;
+			}
+			
+			#bottom {
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				background-color: gainsboro;
+				font-size: 12px;
+				position: absolute;
+				bottom: 0;
+				z-index: 1000;
+				background-color: rgb(240,240,240);
+			}
+			
+			#nav li a:hover {
+				color: orange;
+			}
+			
+			#footer_nav li a:hover {
+				color: orange;
+			}
+			
+			#one {
+				width: 100%;
+				/*height: 1000px;*/
+				height: 100%;
+				background-color: rgb(240, 240, 240);
+				overflow: hidden;
+				position: relative;
+				z-index: 10;
+			}
+			
+			#text1 {
+				width: 1100px;
+				margin: 0 auto;
+				transform: translateX(0);
+				transition: all 1s ease;
+			}
+			/*position: absolute;left: 0px;top: 0px;*/
+			
+			#text1 p {
+				font-size: 14px;
+				margin: 14px 0;
+			}
+			
+			#text1 a {
+				font-size: 18px;
+				color: rgb(12, 144, 207);
+			}
+			
+			#one_tu {
+				float: right;
+				width: 80%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -100px;
+				margin-top: -500px;
+			}
+			
+			#one_tu img {
+				max-width: 80%;
+				width: 75%;
+				min-width: 70%;
+				transition: all 1s ease;
+			}
+			
+			#two {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 8;
+				background-color: white;
+			}
+			
+			#two h1 {
+				text-align: center;
+			}
+			
+			#two h3 {
+				text-align: center;
+				margin-top: 20px;
+			}
+			
+			#two h5 {
+				text-align: center;
+				margin-top: 20px;
+			}
+			
+			#two_RL {
+				width: 1200px;
+				height: 490px;
+				/*background-color: seashell;*/
+				position: relative;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+			
+			#two_left {
+				width: 693px;
+				height: 490px;
+				/*border: 1px solid black;*/
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				transition: all 1s ease;
+				transform: translateX(-1000px);
+			}
+			
+			#two_left h4 {
+				font-size: 1.2rem;
+				margin-top: 10px;
+			}
+			
+			#two_left p:nth-child(3) {
+				margin-top: 35px;
+			}
+			
+			#two_left p {
+				margin-top: 10px;
+			}
+			
+			#two_right {
+				width: 693px;
+				height: 490px;
+				/*border: 1px solid red;*/
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				transform: translateX(1000px);
+				transition: all 1s ease;
+			}
+			
+			#two_right h4 {
+				font-size: 1.2rem;
+				/*margin-top: 10px;*/
+				margin-left: 250px;
+			}
+			
+			#two_right p:nth-child(2) {
+				margin-top: 35px;
+			}
+			
+			#two_right p {
+				margin-top: 10px;
+				margin-left: 250px;
+			}
+			
+			#three {
+				width: 100%;
+			height: 100%;
+				position: relative;
+				/*border: 1px solid red;*/
+				z-index: 7;
+				background-color: white;
+			}
+			
+			#three_box {
+				width: 1100px;
+				height: 400px;
+				/*background-color: violet;*/
+				margin: 0 auto;
+				margin-top: 250px;
+			}
+			
+			#three_watch img {
+				position: relative;
+				top: -450px;
+				left: 280px;
+			}
+			
+			#three_txt {
+				width: 520px;
+				text-align: center;
+				/*background-color: yellow;*/
+			}
+			
+			#three_txt p {
+				margin-top: 15px;
+			}
+			
+			#three_txt p:nth-child(2) {
+				margin-top: 100px;
+			}
+			
+			#three_txt p:nth-child(5) a {
+				color: rgb(75, 172, 215);
+			}
+			
+			#three_com1 {
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: rgb(35, 206, 236);
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-size: 1.2rem;
+				position: absolute;
+				top: 670px;
+				left: 50%;
+				margin-left: -400px;
+				transform: translateX(200px);
+				transition: all 2s ease;
+			}
+			
+			#three_com2 {
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: rgb(24, 214, 146);
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-size: 1.2rem;
+				position: absolute;
+				top: 670px;
+				left: 50%;
+				margin-left: -200px;
+				transform: translateX(100px);
+				transition: all 2s ease;
+			}
+			
+			#three_com3 {
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: rgb(141, 219, 93);
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-size: 1.2rem;
+				position: absolute;
+				top: 670px;
+				left: 50%;
+			}
+			
+			#three_com4 {
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: rgb(242, 187, 70);
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-size: 1.2rem;
+				position: absolute;
+				top: 670px;
+				left: 50%;
+				margin-left: 200px;
+				transform: translateX(-100px);
+				transition: all 2s ease;
+			}
+			
+			#three_com5 {
+				width: 100px;
+				height: 100px;
+				border-radius: 50px;
+				background-color: rgb(75, 178, 228);
+				text-align: center;
+				line-height: 100px;
+				color: white;
+				font-size: 1.2rem;
+				position: absolute;
+				top: 670px;
+				left: 50%;
+				margin-left: 400px;
+				transform: translateX(-200px);
+				transition: all 2s ease;
+			}
+			
+#five {
+				width: 100%;
+				height: 100%;
+				background-image: url(img/bg-count.png);
+				background-repeat: no-repeat;
+				position: relative;
+				top: 0;
+				z-index: 3;
+				
+			}
+			/*#five_box{
+				width: 1000px;
+				height: 500px;
+				background-color: silver;
+					
+			}*/
+			
+			#five_text h1 {
+				font-weight: bold;
+				color: white;
+				padding-top: 100px;
+				text-align: center;
+				font-size: 48px;
+			}
+	
+			#five_image{
+				width: 1250px;
+				height: 500px;
+				/*background-color: silver;*/
+				position: relative;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+			#five_image img:nth-child(1) {
+				position: absolute;
+				left: 0;
+				top: 0px;
+				transition: all 1s ease;
+				transform: translateX(-1000px);
+			}
+			
+			#five_image img:nth-child(2) {
+				position: absolute;
+				top:0px;
+				right: 0px;
+				transition: all 1s ease;
+				transform: translateX(1000px);
+			}
+			
+			
+			#four {
+				width: 100%;
+				height: 100%;
+				background-image: url(img/bg-unibody.png);
+				background-repeat: no-repeat;
+				position: relative;
+				top: 0;
+				z-index: 4;
+				overflow: hidden;
+			}
+			
+			#four_text h1 {
+				font-weight: bold;
+				color: white;
+				padding-top: 50px;
+				text-align: center;
+				font-size: 48px;
+				margin-bottom: 10px;
+			}
+			
+			#four_text p {
+				text-align: center;
+				color: white;
+				margin-top: 5px;
+			}
+			
+			#four_image {
+				opacity: 1;
+				width: 1000px;
+				height: 420px;
+				position: relative;
+			}
+			
+			#four_image img:nth-child(4) {
+				z-index: 0;
+				transform: translateX(1000px);
+				top: 0px;
+				position: absolute;
+				left: 70%;
+				transition: all 2s ease; 
+			}
+			
+			#four_image img:nth-child(1) {
+				z-index: 1;
+				transform: translateX(-2000px);
+				top: 50px;
+				position: absolute;
+				left: 15%;
+				transition: all 2s ease; 
+			}
+			
+			#four_image img:nth-child(2) {
+				z-index: 1;
+				transform: translateX(-1000px);
+				top: 50px;
+				position: absolute;
+				left: 40%;
+				transition: all 2s ease; 
+			}
+			
+			#four_image img:nth-child(3) {
+				z-index: 1;
+				transform: translateX(1000px);
+				top: 50px;
+				position: absolute;
+				left: 100%;
+				transition: all 2s ease; 
+			}
+			
+			#four_bottom {
+				text-align: center;
+				margin-top: 20px;
+				/*-webkit-margin-before: auto;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Swiper -->
+		<div id="header">
+			<img id="logo" src="img/小迪科技—上海小迪信息科技有限公司_files/logo2.png" />
+			<ul id="nav">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="product.html">产品</a>
+				</li>
+				<li>
+					<a href="peijian.html">配件</a>
+				</li>
+				<li>
+					<a href="serve.html">服务</a>
+				</li>
+				<li>
+					<a href="#">社区</a>
+				</li>
+				<li>
+					<a href="aboutUs.html">关于我们</a>
+				</li>
+				<li>
+					<a href="http://item.jd.com/2749987.html">店铺</a>
+				</li>
+			</ul>
+		</div>
+		<div class="swiper-container swiper-container-vertical">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide-active" style="height: 337px; margin-bottom: 30px;">
+					<div id="one">
+						<div id="text1">
+							<img style="margin-top: 168px;" src="img/slogan.png" />
+							<p>也许你的孩子很平凡，但是，只要你有良好的家教方法</p>
+							<p>与孩子共同努力，你的孩子就会脱颖而出，早成大器</p>
+							<p>儿女的成长只有一次，陪伴他们一起成长</p>
+							<p>是责任，是幸福，也是一门艺术</p>
+							<a href="http://item.jd.com/2749987.html">产品详情介绍 ></a>
+						</div>
+						<div id="one_tu">
+							<img src="img/watch.png" />
+						</div>
+
+					</div>
+					<!--one结束-->
+				</div>
+				<div class="swiper-slide swiper-slide-next" style="height: 337px; margin-bottom: 30px;">
+					<div id="two">
+						<h1>陪伴是童年最温暖的记忆</h1>
+						<h3>给孩子一个父母不缺席的童年</h3>
+						<h5>有一种爱，一生只为一人钟情，如清风和煦，如清泉甘甜，那就是对孩子的爱</h5>
+						<div id="two_RL">
+
+							<div id="two_left">
+								<img src="img/left.png" />
+								<h4>妈妈的烦恼</h4>
+								<p>工作繁忙，没时间接孩子，不知道孩子放学后有没有如时回家</p>
+								<p>担心！周末，孩子跑出去玩，找不到人着急上火</p>
+								<p>人在外地，好想TA，不知道现在在做什么，好想和TA说说话</p>
+							</div>
+							<!--two_left结束-->
+							<div id="two_right">
+								<h4>孩子的孤单</h4>
+								<p>爸爸妈妈工作太忙，好久没听到他们的声音了</p>
+								<p>今天考试100分，好想第一时间和爸爸妈妈分享啊</p>
+								<p>周末我想和同学出去玩，妈妈说担心不让我出去怎么办</p>
+								<img src="img/right.png" />
+							</div>
+							<!--two_right结束-->
+						</div>
+						<!--two_RL结束-->
+					</div>
+				</div>
+				<div class="swiper-slide" style="height: 337px; margin-bottom: 30px;">
+					<div id="three">
+						<div id="three_box">
+
+							<div id="three_txt">
+								<div id="three_slogan"><img src="img/disney-slogan.png" /></div>
+								<p>不仅仅是生活、运动、心情和健康。小迪儿童智能手表</p>
+								<p>都能与爸妈手机同步，给孩子全天的守护</p>
+								<p>担心少一些，陪伴更长远。</p>
+								<p>
+									<a href="http://item.jd.com/2749987.html">进一步了解手表的重新构想</a>
+								</p>
+							</div>
+							<!--three_txt结束-->
+							<div id="three_watch">
+								<img src="img/watch-two.png" />
+							</div>
+						</div>
+
+						<div id="three_com1">
+							沟通陪伴
+						</div>
+						<div id="three_com2">
+							安全陪伴
+						</div>
+						<div id="three_com3">
+							陪伴提醒
+						</div>
+						<div id="three_com4">
+							陪伴乐园
+						</div>
+						<div id="three_com5">
+							陪伴指数
+						</div>
+						<!--three_box结束-->
+					</div>
+				</div>
+				<div class="swiper-slide" style="height: 337px; margin-bottom: 30px;">
+					<div id="four">
+						<div id="four_box">
+						<div id="four_text">
+							<h1>一体化无缝表壳设计</h1>
+							<p>SIM卡槽、喇叭孔隐形设计</p>
+							<p>表身无螺丝，无需担心细小零件对小孩造成危险</p>
+							<p>超声波、圆润一体化无缝表壳，防尘防水更安全</p>
+						</div>
+						<div id="four_image">
+							<img src="img/w1.png" />
+							<img src="img/w2.png" />
+							<img src="img/w3.png" />
+							<img src="img/w.png" />
+						</div>
+						</div>
+				
+						<div id="four_bottom">
+							<img src="img/points.png" />
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide" style="height: 337px; margin-bottom: 30px;">
+<div id="five">
+	<div id="five_box">
+		<div id="five_text">
+			<h1>陪伴指数: 科学统计，随时掌握宝贝的成长轨迹</h1>
+		</div>
+		<div id="five_image">
+			<img src="img/cloud.png" / id="five_cloud">
+			<img src="img/phone.png" id="five_phone" />
+		</div>
+	</div>
+	<!--five_box结束-->
+</div>
+	
+
+				</div>
+
+			</div>
+			<!-- Add Pagination -->
+			<div id="footer">
+				<ul id="footer_nav">
+					<li>
+						<a href="index.html">小迪科技官网</a>
+					</li>
+					<li>
+						<a href="download.html">下载APP</a>
+					</li>
+					<li>
+						<a href="question.html">常见问题</a>
+					</li>
+					<li>
+						<a href="aboutUs.html">关于我们</a>
+					</li>
+					<li>
+						<a href="http://item.jd.com/2749987.html">京东商城</a>
+					</li>
+					<li>
+						<a href="contactUs.html">联系我们</a>
+					</li>
+				</ul>
+				<span>
+				沪ICP备10207551号
+			</span>
+			</div>
+			<div id="bottom">
+				Copyright ©2015-2020 小迪科技daesmart.com 版权所有.
+			</div>
+
+	</body>
+	<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	var two_left = document.getElementById("two_left");
+		var two_right = document.getElementById("two_right");
+		var four_imgs = document.querySelectorAll("#four_image>img");
+		var cloud = document.getElementById("five_cloud");
+		var phone = document.getElementById("five_phone");
+		var swiper = new Swiper('.swiper-container', {
+//			width:1000,
+			pagination: '.swiper-pagination',
+			direction: 'vertical',
+			slidesPerView: 1,
+			paginationClickable: true,
+			spaceBetween: 30,
+			mousewheelControl: true
+		});
+		var ab = document.getElementsByClassName("swiper-slide");
+		document.onmousewheel=function(){
+			//activeIndex当前活动界面的下角标
+			if (swiper.activeIndex==0) {
+				two_left.style.transform = "translateX(" + (-1000) + "px)";
+			  	 two_right.style.transform = "translateX(" + 1000 + "px)";
+			}
+			if (swiper.activeIndex==1) {
+//			console.log(swiper.activeIndex);
+			  two_left.style.transform = "translateX(" + 0 + "px)";
+			  two_right.style.transform = "translateX(" + 0 + "px)";
+			  $("#three_com1").css({
+						"transform":  "translateX(200px)"
+					}, 2000);
+					$("#three_com2").css({
+						"transform":  "translateX(100px)"
+					}, 2000);
+					$("#three_com4").css({
+						"transform":  "translateX(-100px)"
+					}, 2000);
+					$("#three_com5").css({
+						"transform":  "translateX(-200px)"
+					}, 2000);
+		}
+			if (swiper.activeIndex==2) {
+				 two_left.style.transform = "translateX(" + (-1000) + "px)";
+			  	 two_right.style.transform = "translateX(" + 1000 + "px)";
+				$("#three_com1").css({
+						"transform":  "translateX(0)"
+					}, 2000);
+					$("#three_com2").css({
+						"transform":  "translateX(0)"
+					}, 2000);
+					$("#three_com4").css({
+						"transform":  "translateX(0)"
+					}, 2000);
+					$("#three_com5").css({
+						"transform":  "translateX(0)"
+					}, 2000);
+			four_imgs[0].style.transform = "translateX("+(-2000)+"px)";
+			four_imgs[1].style.transform = "translateX("+(-1000)+"px)";
+			four_imgs[2].style.transform = "translateX("+1000+"px)";
+			four_imgs[3].style.transform = "translateX("+1000+"px)";
+			}
+			if (swiper.activeIndex==3) {
+				$("#three_com1").css({
+						"transform":  "translateX(200px)"
+					}, 2000);
+					$("#three_com2").css({
+						"transform":  "translateX(100px)"
+					}, 2000);
+					$("#three_com4").css({
+						"transform":  "translateX(-100px)"
+					}, 2000);
+					$("#three_com5").css({
+						"transform":  "translateX(-200px)"
+					}, 2000);
+			four_imgs[0].style.transform = "translateX("+0+"px)";
+			four_imgs[1].style.transform = "translateX("+0+"px)";
+			four_imgs[2].style.transform = "translateX("+(-120)+"px)";
+			four_imgs[3].style.transform = "translateX("+0+"px)";
+			cloud.style.transform = "translateX("+(-1000)+"px)";
+			phone.style.transform = "translateX("+1000+"px)";
+			
+			}
+			if (swiper.activeIndex==4) {
+			four_imgs[0].style.transform = "translateX("+(-2000)+"px)";
+			four_imgs[1].style.transform = "translateX("+(-1000)+"px)";
+			four_imgs[2].style.transform = "translateX("+1000+"px)";
+			four_imgs[3].style.transform = "translateX("+1000+"px)";
+			cloud.style.transform = "translateX("+0+"px)";
+			phone.style.transform = "translateX("+0+"px)";
+			}
+		}
+		
+		
+
+	</script>
+
+</html>

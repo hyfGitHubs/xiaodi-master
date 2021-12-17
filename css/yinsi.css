@@ -1,0 +1,100 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+  html,body{
+  	font-size: 12px;
+  	position: relative;
+  }
+  /*#head{
+  	width: 960px;
+  	height: 100px;
+  	border: 1px solid black;
+  	margin: 0 auto;
+  }*/
+  #head{
+				width: 1200px;margin: 0 auto;height: 80px;
+			}
+			#logo,#nav{float: left;}
+			#nav{margin-top: 30px;margin-left: 140px;}
+			#nav li{float: left;padding: 0 42px;border-right: 1px solid gainsboro;}
+			#nav li a{font-size: 14px;}
+			#nav li a:hover{color: orangered;}
+			#footer{width: 1000px;margin: 0 auto;height: 50px;}
+			#footer_nav,#footer_nav li{float: left;}
+			#footer li{width: 80px;height: 20px;text-align: center;border-right: 1px solid lightgray;margin-top: 15px;}
+			#footer_nav li a,#footer span{font-size: 12px;}
+			#footer_nav li a:hover{color: orangered;}
+			#footer span{float: right;margin-top: 15px;}
+			#bottom{height: 30px;line-height: 30px;text-align: center;background-color: gainsboro;font-size: 12px;}
+  #content{
+  	width: 960px;
+  	margin: 0 auto;
+  	/*border: 1px solid red;*/
+  	position: relative;
+  }
+  #msg{
+  	font-size: 1.2rem;
+  }
+  #line1{
+  	width: 150px;
+  	height: 1px;
+  	background-color: gray;
+  	position: relative;
+  	top: 7px;
+  	
+  }
+  #current{
+  	position: absolute;
+  	
+  	
+  }
+  #current{
+  	position: absolute;
+  	top: 5PX;
+  	left: 170px;
+  }
+  #current a:hover{
+  	color: orangered;
+  }
+  #txt a:hover{
+  	color: orangered;
+  }
+   #line2{
+  	width: 810px;
+  	height: 1px;
+  	background-color: gray;
+  	position: absolute;
+  	top: 21px;
+  	left: 170px;
+  	
+  }
+  #serve1{
+    margin-top: 15px;
+  }
+  #brick2{
+  	display: inline-block;
+  	width: 5px;
+  	height: 12px;
+  	background-color: rgb(65,159,238);
+  	margin-top: 3px;
+  }
+  #brick1,#brick3{
+  	display: inline-block;
+  	width: 5px;
+  	height: 12px;
+  	background-color: gainsboro;
+  	margin-top: 3px;
+  }
+  #photo{
+  	width: 810px;
+  	height: 484px;
+  	/*border: 1px solid black;*/
+  	position: relative;
+  	left: 170px;
+  	top: -80px;
+  	
+  }
+   #photo p{
+   	margin-top: 10px;
+   }
